@@ -1,18 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
-makeCacheMatrix <- function(x = matrix()) {
-
-}
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
+## Whith the cache matrix we create a function that allow to inverse the matrix in an easy way and it´s not time consuming
+##To do this first we create a special "matrix" and in the second function that works in conjuctions the other function do the inverse of the special "matrix"
 
 makeCacheMatrix<-function(x=matrix()){
     inv<-NULL
@@ -26,6 +13,7 @@ makeCacheMatrix<-function(x=matrix()){
     list(set = set, get=get, setInverse=setInverse, getInverse=getInverse)
 }
 
+## cacheSolve do the inverse of the special matrix
 cacheSolve <- function(x, ...){
     inv<- x$getInverse()
     if(!is.null(inv)){
